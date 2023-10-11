@@ -1,0 +1,184 @@
+@import '../03-generic/breakpoints.scss';
+@import '../01-settings/global.scss';
+
+// global classes
+
+.text-decoration {
+    &::before {
+        content: '';
+        display: block;
+        background-image: url('http://localhost/wp-content/themes/twentytwentyone/assets/images/decoration.svg');
+        height: 9px;
+        position: absolute;
+        z-index: 99;
+        width: 9px;
+        left: -16px;
+        top: 50%;
+        margin-top: -4.5px;
+    }
+}
+
+.banner-decoration {
+    &::after {
+        content: '';
+        width: 518px;
+        height: 518px;
+        border: 1px solid var(--global--color-dark-gray);
+        border-radius: 50%;
+        position: absolute;
+        top: 35px;
+        left: -238px;
+        z-index: -2;
+        opacity: 0.1;
+
+        @include media(mobile-only) {
+            width: 350px;
+            height: 350px;
+            top: 25px;
+            left: -161px;
+        }
+    }
+
+    &::before {
+        content: '';
+        width: 246px;
+        height: 246px;
+        background: #fae2d6;
+        position: absolute;
+        top: 160px;
+        left: -112px;
+        z-index: -2;
+        border-radius: 50%;
+        opacity: 0.4;
+
+        @include media(mobile-only) {
+            width: 166px;
+            height: 176px;
+            top: 114px;
+            left: -82px;
+        }
+    }
+}
+
+.info-boxes-decoration {
+    &::before {
+        content: '';
+        display: block;
+        background-image: url('http://localhost/wp-content/themes/twentytwentyone/assets/images/banner-decoration-dots.svg');
+        height: 9px;
+        position: absolute;
+        z-index: 99;
+        width: 9px;
+        left: -21px;
+        top: 50%;
+        margin-top: -16px;
+    }
+}
+
+.quote-decoration {
+    &:before {
+        content: '”';
+        display: block;
+        font-size: 218px;
+        position: absolute;
+        top: -35px;
+        left: -66px;
+        -webkit-text-fill-color: var(--global--color-white);
+        -webkit-text-stroke: 1px var(--global--color-quote-mark);
+        opacity: 0.29;
+        height: 151px;
+        rotate: 180deg;
+        z-index: -1;
+
+        @include media(tablet-only) {
+            left: calc(50% - 50px);
+            top: -80px;
+        }
+    }
+
+    &:after {
+        content: '”';
+        display: block;
+        font-size: 218px;
+        position: absolute;
+        bottom: -41px;
+        right: -68px;
+        -webkit-text-fill-color: var(--global--color-white);
+        -webkit-text-stroke: 1px var(--global--color-quote-mark);
+        opacity: 0.29;
+        height: 151px;
+        z-index: -1;
+
+        @include media(tablet-only) {
+            right: calc(50% - 50px);
+            bottom: -80px;
+        }
+    }
+}
+
+.quote-decoration-v2 {
+    &:before {
+        content: '';
+        display: block;
+        width: 341px;
+        height: 341px;
+        position: absolute;
+        top: calc(50% - 170.5px);
+        left: calc(50% - 170.5px);
+        background-color: var(--global--color-white);
+        border-radius: 50%;
+        box-shadow: 0px 0px 64px 0px var(--global--color-border-creme);
+        animation: pulse-v2 4s infinite;
+        z-index: -1;
+
+        @include media(tablet-only) {
+            width: 254px;
+            height: 254px;
+            top: calc(50% - 127px);
+            left: calc(50% - 127px);
+        }
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        width: 518px;
+        height: 518px;
+        position: absolute;
+        top: calc(50% - 259px);
+        left: calc(50% - 259px);
+        background-color: transparent;
+        border-radius: 50%;
+        border: 1px solid var(--global--color-border-creme);
+        animation: pulse 4s infinite;
+        z-index: -2;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse-v2 {
+    0% {
+        box-shadow: 0px 0px 64px 0px var(--global--color-border-creme);
+    }
+
+    50% {
+        box-shadow: 0px 0px 4px 0px var(--global--color-border-creme);
+    }
+
+    100% {
+        box-shadow: 0px 0px 64px 0px var(--global--color-border-creme);
+    }
+}
