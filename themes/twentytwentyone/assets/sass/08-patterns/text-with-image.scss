@@ -1,0 +1,51 @@
+@import '../01-settings/typography.scss';
+
+.text-with-image {
+    padding: 50px 0;
+    .wp-block-media-text {
+        grid-template-columns: auto 1fr;
+
+        @include media(tablet-only) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, auto);
+            max-width: 591px;
+        }
+
+        &__content {
+            grid-column: initial;
+            grid-row: initial;
+
+            @include media(wide) {
+                padding: 0 0 0 79px;
+            }
+
+            @include media(tablet-only) {
+                padding: 22px 0 0;
+            }
+
+            p {
+                margin-bottom: 8px;
+                @extend .font-variation-v4;
+            }
+
+            .wp-block-heading {
+                color: var(--global--color-dark-gray);
+                margin: 0 0 32px !important;
+                word-break: keep-all;
+                @extend .font-variation-v5;
+            }
+
+            .wp-block-buttons {
+                margin-top: 32px;
+
+                @include media(mobile-only) {
+                    justify-content: center;
+
+                    .wp-block-button__link {
+                        min-width: 299px;
+                    }
+                }
+            }
+        }
+    }
+}
