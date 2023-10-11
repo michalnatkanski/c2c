@@ -4,15 +4,11 @@
 .entry-content:after,
 .comment-content:before,
 .comment-content:after,
-.site-header:before,
-.site-header:after,
 .site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
-	content: "";
-	display: table;
-	table-layout: fixed;
+.site-content:after {
+    content: '';
+    display: table;
+    table-layout: fixed;
 }
 
 .clear:after,
@@ -21,5 +17,5 @@
 .site-header:after,
 .site-content:after,
 .site-footer:after {
-	clear: both;
+    clear: both;
 }
