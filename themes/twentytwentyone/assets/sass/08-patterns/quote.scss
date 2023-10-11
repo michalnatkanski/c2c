@@ -1,0 +1,29 @@
+@import '../01-settings/typography.scss';
+@import '../01-settings/global-classes.scss';
+
+.quote {
+    padding: 50px 0;
+    overflow: hidden;
+
+    .wp-block-group__inner-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 518px;
+    }
+
+    blockquote.wp-block-quote {
+        @include media(wide) {
+            max-width: 100% !important;
+        }
+
+        @extend .quote-decoration-v2;
+
+        p {
+            position: relative;
+            color: var(--global--color-dark-gray);
+            @extend .font-variation-v9;
+            @extend .quote-decoration;
+        }
+    }
+}
