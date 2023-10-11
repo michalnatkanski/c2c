@@ -14,8 +14,13 @@
     }
 
     .wp-block-heading {
+        margin-bottom: 128px;
         margin-top: 0 !important;
         color: var(--global--color-dark-gray);
+
+        @include media(tablet-only) {
+            margin-bottom: 40px;
+        }
 
         @extend .font-variation-v5;
     }
