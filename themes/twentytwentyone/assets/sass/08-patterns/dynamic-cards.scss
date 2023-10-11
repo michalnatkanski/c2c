@@ -1,0 +1,22 @@
+@import '../01-settings/typography.scss';
+@import '../01-settings/global.scss';
+
+.dynamic-cards {
+    padding: 68px 0;
+
+    @include media(mobile-only) {
+        padding: 45px 0;
+    }
+
+    p {
+        margin-bottom: 0;
+        @extend .font-variation-v4;
+    }
+
+    .wp-block-heading {
+        margin-top: 0 !important;
+        color: var(--global--color-dark-gray);
+
+        @extend .font-variation-v5;
+    }
+}

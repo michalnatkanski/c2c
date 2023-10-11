@@ -1,0 +1,158 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.dynamic-posts {
+    max-width: 100% !important;
+    margin: 0 !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__box {
+        flex-basis: calc(50% - 59.5px);
+        min-width: 300px;
+        max-height: 586px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+
+        &:nth-of-type(even) {
+            margin-top: 83px;
+        }
+
+        @media only screen and (max-width: 919px) {
+            flex-basis: 100%;
+            margin-bottom: 40px;
+
+            &:nth-of-type(even) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__content {
+        background: #f6ece8;
+        padding: 24px;
+
+        @media only screen and (max-width: 919px) {
+            padding: 12px;
+        }
+    }
+
+    &__image {
+        max-width: 100%;
+    }
+
+    &__title,
+    &__excerpt {
+        text-align: center;
+        color: #967675;
+        font-weight: 400;
+    }
+
+    &__title {
+        font-family: Playfair Display;
+        font-size: 48px;
+        font-style: italic;
+        line-height: normal;
+
+        @media only screen and (max-width: 919px) {
+            font-size: 28px;
+        }
+    }
+
+    &__excerpt {
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        line-height: 165.9%;
+        max-width: 362px;
+        margin: 0 auto;
+
+        @media only screen and (max-width: 919px) {
+            font-size: 10px;
+        }
+    }
+
+    &__show-more {
+        margin-top: 41px !important;
+        max-width: 100% !important;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &::before {
+            content: '';
+            display: block;
+            height: 1px;
+            opacity: 0.6;
+            background: #967675;
+            width: 100%;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            height: 1px;
+            opacity: 0.6;
+            background: #967675;
+            width: 100%;
+        }
+
+        &-container {
+            max-width: 100% !important;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &::before {
+                content: 'More';
+                display: block;
+                position: absolute;
+                left: auto;
+                right: auto;
+                z-index: -1;
+                color: #23242c;
+                opacity: 0.04;
+                font-family: Playfair Display;
+                font-size: 182.38px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+        }
+
+        &-button {
+            color: #23242c;
+            font-family: Playfair Display;
+            font-size: 36.846px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            border: none;
+            background: transparent !important;
+            padding: 0;
+            box-shadow: none;
+            min-width: 220px;
+            margin: 0 15px;
+
+            &::before {
+                content: '+';
+                color: #23242c;
+                font-family: Playfair Display;
+                font-size: 36.846px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+                margin-right: 10px;
+            }
+        }
+    }
+}
