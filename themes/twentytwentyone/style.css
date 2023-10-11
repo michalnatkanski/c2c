@@ -8703,8 +8703,15 @@ footer {
 }
 
 .dynamic-cards .wp-block-heading {
+	margin-bottom: 128px;
 	margin-top: 0 !important;
 	color: var(--global--color-dark-gray);
+}
+@media only screen and (max-width: 919px) {
+
+	.dynamic-cards .wp-block-heading {
+		margin-bottom: 40px;
+	}
 }
 
 .font-variation-v1,
