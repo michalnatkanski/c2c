@@ -36,7 +36,7 @@ The project uses the following WordPress plugins:
 
 To use this project, follow these steps:
 
-1. Clone the repository with the main project content: `git clone https://github.com/yourusername/mad-hatters.git`
+1. Clone the repository with the main project content: `git clone https://github.com/michalnatkanski/c2c.git`
 2. Check out the "main" branch which contains the entire WordPress project, including the `wp-content` directory.
 3. To run the project with Docker, check out the "config-docker-files" branch. It contains the Docker configuration files, the `wp-config.php` file, and a necessary database for reproducing the project.
 4. Activate neccesarry Plugins and the "Twenty Twenty-One" theme and customize the content and settings as needed.
