@@ -134,6 +134,7 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 
 		// Enqueue editor styles.
 		add_editor_style( $editor_stylesheet_path );
+		
 
 		// Add custom editor font sizes.
 		add_theme_support(
@@ -142,43 +143,43 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 				array(
 					'name'      => esc_html__( 'Extra small', 'twentytwentyone' ),
 					'shortName' => esc_html_x( 'XS', 'Font size', 'twentytwentyone' ),
-					'size'      => 16,
+					'size'      => '16px',
 					'slug'      => 'extra-small',
 				),
 				array(
 					'name'      => esc_html__( 'Small', 'twentytwentyone' ),
 					'shortName' => esc_html_x( 'S', 'Font size', 'twentytwentyone' ),
-					'size'      => 18,
+					'size'      => '18px',
 					'slug'      => 'small',
 				),
 				array(
 					'name'      => esc_html__( 'Normal', 'twentytwentyone' ),
 					'shortName' => esc_html_x( 'M', 'Font size', 'twentytwentyone' ),
-					'size'      => 20,
+					'size'      => '24px',
 					'slug'      => 'normal',
 				),
 				array(
 					'name'      => esc_html__( 'Large', 'twentytwentyone' ),
 					'shortName' => esc_html_x( 'L', 'Font size', 'twentytwentyone' ),
-					'size'      => 24,
+					'size'      => '16px',
 					'slug'      => 'large',
 				),
 				array(
 					'name'      => esc_html__( 'Extra large', 'twentytwentyone' ),
 					'shortName' => esc_html_x( 'XL', 'Font size', 'twentytwentyone' ),
-					'size'      => 40,
+					'size'      => '38px',
 					'slug'      => 'extra-large',
 				),
 				array(
 					'name'      => esc_html__( 'Huge', 'twentytwentyone' ),
 					'shortName' => esc_html_x( 'XXL', 'Font size', 'twentytwentyone' ),
-					'size'      => 96,
+					'size'      => '43.52px',
 					'slug'      => 'huge',
 				),
 				array(
 					'name'      => esc_html__( 'Gigantic', 'twentytwentyone' ),
 					'shortName' => esc_html_x( 'XXXL', 'Font size', 'twentytwentyone' ),
-					'size'      => 144,
+					'size'      => '102px',
 					'slug'      => 'gigantic',
 				),
 			)
@@ -210,52 +211,97 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 				array(
 					'name'  => esc_html__( 'Black', 'twentytwentyone' ),
 					'slug'  => 'black',
-					'color' => $black,
-				),
-				array(
-					'name'  => esc_html__( 'Dark gray', 'twentytwentyone' ),
-					'slug'  => 'dark-gray',
-					'color' => $dark_gray,
-				),
-				array(
-					'name'  => esc_html__( 'Gray', 'twentytwentyone' ),
-					'slug'  => 'gray',
-					'color' => $gray,
-				),
-				array(
-					'name'  => esc_html__( 'Green', 'twentytwentyone' ),
-					'slug'  => 'green',
-					'color' => $green,
-				),
-				array(
-					'name'  => esc_html__( 'Blue', 'twentytwentyone' ),
-					'slug'  => 'blue',
-					'color' => $blue,
-				),
-				array(
-					'name'  => esc_html__( 'Purple', 'twentytwentyone' ),
-					'slug'  => 'purple',
-					'color' => $purple,
-				),
-				array(
-					'name'  => esc_html__( 'Red', 'twentytwentyone' ),
-					'slug'  => 'red',
-					'color' => $red,
-				),
-				array(
-					'name'  => esc_html__( 'Orange', 'twentytwentyone' ),
-					'slug'  => 'orange',
-					'color' => $orange,
-				),
-				array(
-					'name'  => esc_html__( 'Yellow', 'twentytwentyone' ),
-					'slug'  => 'yellow',
-					'color' => $yellow,
+					'color' => '#000',
 				),
 				array(
 					'name'  => esc_html__( 'White', 'twentytwentyone' ),
 					'slug'  => 'white',
-					'color' => $white,
+					'color' => '#fff',
+				),
+				array(
+					'name'  => esc_html__( 'Very Light Gray', 'twentytwentyone' ),
+					'slug'  => 'very-light-gray',
+					'color' => '#faf7f3',
+				),
+				array(
+					'name'  => esc_html__( 'Dark Gray', 'twentytwentyone' ),
+					'slug'  => 'dark-gray',
+					'color' => '#23242c',
+				),
+				array(
+					'name'  => esc_html__( 'Light Creme', 'twentytwentyone' ),
+					'slug'  => 'light-creme',
+					'color' => '#ededed',
+				),
+				array(
+					'name'  => esc_html__( 'Creme', 'twentytwentyone' ),
+					'slug'  => 'creme',
+					'color' => '#967675',
+				),
+				array(
+					'name'  => esc_html__( 'Background Creme', 'twentytwentyone' ),
+					'slug'  => 'background-creme',
+					'color' => '#f6ece8',
+				),
+				array(
+					'name'  => esc_html__( 'Background Light Creme', 'twentytwentyone' ),
+					'slug'  => 'background-light-creme',
+					'color' => '#f9f2ef',
+				),
+				array(
+					'name'  => esc_html__( 'Background Creme', 'twentytwentyone' ),
+					'slug'  => 'background-creme',
+					'color' => '#f6ece8',
+				),
+				array(
+					'name'  => esc_html__( 'Form Creme', 'twentytwentyone' ),
+					'slug'  => 'form-creme',
+					'color' => '#dccbc6',
+				),
+				array(
+					'name'  => esc_html__( 'Form Background Creme', 'twentytwentyone' ),
+					'slug'  => 'form-background-creme',
+					'color' => 'rgba(150, 118, 117, 0.5)',
+				),
+				array(
+					'name'  => esc_html__( 'Border Creme', 'twentytwentyone' ),
+					'slug'  => 'border-creme',
+					'color' => '#edd5c8',
+				),
+				array(
+					'name'  => esc_html__( 'Very Light Creme', 'twentytwentyone' ),
+					'slug'  => 'very-light-creme',
+					'color' => '#fae2d666',
+				),
+				array(
+					'name'  => esc_html__( 'Very Dark Gray', 'twentytwentyone' ),
+					'slug'  => 'very-dark-gray',
+					'color' => '#111',
+				),
+				array(
+					'name'  => esc_html__( 'Very Dark Creme', 'twentytwentyone' ),
+					'slug'  => 'very-dark-creme',
+					'color' => '#9d8888',
+				),
+				array(
+					'name'  => esc_html__( 'Dark Creme', 'twentytwentyone' ),
+					'slug'  => 'dark-creme',
+					'color' => '#cfadac',
+				),
+				array(
+					'name'  => esc_html__( 'Gray', 'twentytwentyone' ),
+					'slug'  => 'gray',
+					'color' => '#140f26',
+				),
+				array(
+					'name'  => esc_html__( 'Light Gray', 'twentytwentyone' ),
+					'slug'  => 'light-gray',
+					'color' => '#f0f0f0',
+				),
+				array(
+					'name'  => esc_html__( 'Quote Mark', 'twentytwentyone' ),
+					'slug'  => 'quote-mark',
+					'color' => '#964f4c',
 				),
 			)
 		);
@@ -267,41 +313,6 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 					'name'     => esc_html__( 'Purple to yellow', 'twentytwentyone' ),
 					'gradient' => 'linear-gradient(160deg, ' . $purple . ' 0%, ' . $yellow . ' 100%)',
 					'slug'     => 'purple-to-yellow',
-				),
-				array(
-					'name'     => esc_html__( 'Yellow to purple', 'twentytwentyone' ),
-					'gradient' => 'linear-gradient(160deg, ' . $yellow . ' 0%, ' . $purple . ' 100%)',
-					'slug'     => 'yellow-to-purple',
-				),
-				array(
-					'name'     => esc_html__( 'Green to yellow', 'twentytwentyone' ),
-					'gradient' => 'linear-gradient(160deg, ' . $green . ' 0%, ' . $yellow . ' 100%)',
-					'slug'     => 'green-to-yellow',
-				),
-				array(
-					'name'     => esc_html__( 'Yellow to green', 'twentytwentyone' ),
-					'gradient' => 'linear-gradient(160deg, ' . $yellow . ' 0%, ' . $green . ' 100%)',
-					'slug'     => 'yellow-to-green',
-				),
-				array(
-					'name'     => esc_html__( 'Red to yellow', 'twentytwentyone' ),
-					'gradient' => 'linear-gradient(160deg, ' . $red . ' 0%, ' . $yellow . ' 100%)',
-					'slug'     => 'red-to-yellow',
-				),
-				array(
-					'name'     => esc_html__( 'Yellow to red', 'twentytwentyone' ),
-					'gradient' => 'linear-gradient(160deg, ' . $yellow . ' 0%, ' . $red . ' 100%)',
-					'slug'     => 'yellow-to-red',
-				),
-				array(
-					'name'     => esc_html__( 'Purple to red', 'twentytwentyone' ),
-					'gradient' => 'linear-gradient(160deg, ' . $purple . ' 0%, ' . $red . ' 100%)',
-					'slug'     => 'purple-to-red',
-				),
-				array(
-					'name'     => esc_html__( 'Red to purple', 'twentytwentyone' ),
-					'gradient' => 'linear-gradient(160deg, ' . $red . ' 0%, ' . $purple . ' 100%)',
-					'slug'     => 'red-to-purple',
 				),
 			)
 		);
@@ -650,3 +661,12 @@ if ( ! function_exists( 'wp_get_list_item_separator' ) ) :
 		return __( ', ', 'twentytwentyone' );
 	}
 endif;
+
+require_once __DIR__ . '/project_options.php';
+
+const THEME_DIR = __DIR__;
+
+/**
+ * Load all custom pattern.
+ */
+require_once __DIR__ . '/inc/patterns/index.php';
