@@ -51,6 +51,8 @@ Customize the project to match your specific needs and use it as a foundation fo
 
 ## Custom Block - Dynamic Posts Configuration
 
-The custom block "Dynamic Posts" has been configured to load two posts by default. You can extend this functionality by adding the necessary fields in the plugin's files.
+The custom block "Dynamic Posts" is initially configured to display the title of the post, the featured image, and an excerpt by default. You have the flexibility to further customize the block to include additional content or fields as needed using the plugin's editor.
 
 To configure the number of posts or customize the block further, please edit the plugin as needed to suit your specific requirements.
+
+Additionally, you can define the number of displayed posts in the Inspector Controls within the editor.
