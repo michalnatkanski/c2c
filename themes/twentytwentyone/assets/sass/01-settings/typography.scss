@@ -1,0 +1,89 @@
+.font-variation-v1 {
+    font-family: var(--global--font-secondary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.font-variation-v2 {
+    font-family: var(--global--font-secondary);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 32px;
+}
+
+.font-variation-v3 {
+    font-family: var(--global--font-secondary);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.font-variation-v4 {
+    font-family: var(--global--font-secondary);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.font-variation-v5 {
+    font-family: var(--global--font-primary);
+    font-size: 102px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110px;
+
+    @include media(wide-only) {
+        font-size: 80px;
+        line-height: 83px;
+    }
+
+    @include media(tablet-only) {
+        font-size: 70px;
+        line-height: 72px;
+    }
+
+    @include media(mobile-only) {
+        font-size: 66px;
+        line-height: 71px;
+    }
+}
+
+.font-variation-v6 {
+    font-family: var(--global--font-primary);
+    font-size: 43.52px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 17px;
+}
+
+.font-variation-v7 {
+    font-family: var(--global--font-primary);
+    font-size: 38px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.font-variation-v8 {
+    font-family: var(--global--font-secondary);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.font-variation-v9 {
+    font-family: var(--global--font-primary);
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.font-variation-v10 {
+    font-family: var(--global--font-secondary);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
