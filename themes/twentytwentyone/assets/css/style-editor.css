@@ -3,13 +3,42 @@
 /**
  * These styles should be loaded by the Block Editor only
  */
+@font-face {
+	font-family: Poppins;
+	src: url("http://localhost/wp-content/themes/twentytwentyone/assets/fonts/Poppins/Poppins-SemiBold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: Poppins;
+	src: url("http://localhost/wp-content/themes/twentytwentyone/assets/fonts/Poppins/Poppins-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: Poppins;
+	src: url("http://localhost/wp-content/themes/twentytwentyone/assets/fonts/Poppins/Poppins-Light.woff") format("woff");
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: Playfair-Display;
+	font-weight: 700;
+	src: url("http://localhost/wp-content/themes/twentytwentyone/assets/fonts/Playfair_Display/PlayfairDisplay-Bold.woff") format("woff");
+}
+@font-face {
+	font-family: Playfair-Display;
+	font-weight: 400;
+	src: url("http://localhost/wp-content/themes/twentytwentyone/assets/fonts/Playfair_Display/PlayfairDisplay-Italic.woff") format("woff");
+}
 
 /* Variables */
 :root {
 
 	/* Font Family */
-	--global--font-primary: var(--font-headings, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
-	--global--font-secondary: var(--font-base, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
+	--global--font-primary: playfair-display, sans-serif;
+	--global--font-secondary: poppins, sans-serif;
 
 	/* Font Size */
 	--global--font-size-base: 1.25rem;
@@ -62,23 +91,31 @@
 
 	/* Colors */
 	--global--color-black: #000;
-	--global--color-dark-gray: #28303d;
-	--global--color-gray: #39414d;
-	--global--color-light-gray: #f0f0f0;
-	--global--color-green: #d1e4dd;
-	--global--color-blue: #d1dfe4;
-	--global--color-purple: #d1d1e4;
-	--global--color-red: #e4d1d1;
-	--global--color-orange: #e4dad1;
-	--global--color-yellow: #eeeadd;
 	--global--color-white: #fff;
+	--global--color-very-light-gray: #faf7f3;
+	--global--color-dark-gray: #23242c;
+	--global--color-light-creme: #ededed;
+	--global--color-creme: #967675;
+	--global--color-background-creme: #f6ece8;
+	--global--color-background-light-creme: #f9f2ef;
+	--global--color-background-creme: #f6ece8;
+	--global--color-form-creme: #dccbc6;
+	--global--color-form-background-creme: rgba(150, 118, 117, 0.5);
+	--global--color-border-creme: #edd5c8;
+	--global--color-very-light-creme: #fae2d666;
+	--global--color-very-dark-gray: #111;
+	--global--color-very-dark-creme: #9d8888;
+	--global--color-dark-creme: #cfadac;
+	--global--color-gray: #140f26;
+	--global--color-light-gray: #f0f0f0;
+	--global--color-quote-mark: #964f4c;
 	--global--color-white-50: rgba(255, 255, 255, 0.5);
 	--global--color-white-90: rgba(255, 255, 255, 0.9);
-	--global--color-primary: var(--global--color-dark-gray); /* Body text color, site title, footer text color. */
-	--global--color-secondary: var(--global--color-gray); /* Headings */
-	--global--color-primary-hover: var(--global--color-primary);
-	--global--color-background: var(--global--color-green); /* Mint, default body background */
-	--global--color-border: var(--global--color-primary); /* Used for borders (separators) */
+	--global--color-primary: var(--global--color-very-dark-creme); /* Body text color, site title, footer text color. */
+	--global--color-secondary: var(--global--color-dark-gray); /* Headings */
+	--global--color-primary-hover: var(--global--color-creme);
+	--global--color-background: var(--global--color-white); /* Mint, default body background */
+	--global--color-border: var(--global--color-creme); /* Used for borders (separators) */
 
 	/* Spacing */
 	--global--spacing-unit: 20px;
@@ -93,7 +130,8 @@
 	--form--font-family: var(--global--font-secondary);
 	--form--font-size: var(--global--font-size-sm);
 	--form--line-height: var(--global--line-height-body);
-	--form--color-text: var(--global--color-dark-gray);
+	--form--color-text:
+ var(--global--color-dark-gray);
 	--form--color-ranged: var(--global--color-secondary);
 	--form--label-weight: 500;
 	--form--border-color: var(--global--color-secondary);
@@ -107,18 +145,18 @@
 	--cover--color-background: var(--global--color-black);
 
 	/* Buttons */
-	--button--color-text: var(--global--color-background);
-	--button--color-text-hover: var(--global--color-secondary);
+	--button--color-text: var(--global--color-creme);
+	--button--color-text-hover: var(--global--color-white);
 	--button--color-text-active: var(--global--color-secondary);
-	--button--color-background: var(--global--color-secondary);
-	--button--color-background-active: var(--global--color-background);
-	--button--font-family: var(--global--font-primary);
-	--button--font-size: var(--global--font-size-base);
-	--button--font-weight: 500;
-	--button--line-height: 1.5;
-	--button--border-width: 3px;
-	--button--border-radius: 0;
-	--button--padding-vertical: 15px;
+	--button--color-background: var(--global--color-white);
+	--button--color-background-active: var(--global--color-creme);
+	--button--font-family: var(--global--font-secondary);
+	--button--font-size: 16px;
+	--button--font-weight: 400;
+	--button--line-height: 1;
+	--button--border-width: 1px;
+	--button--border-radius: 6px;
+	--button--padding-vertical: 18px;
 	--button--padding-horizontal: calc(2 * var(--button--padding-vertical));
 
 	/* entry */
@@ -143,10 +181,10 @@
 	--branding--description--font-family: var(--global--font-secondary);
 	--branding--description--font-size: var(--global--font-size-sm);
 	--branding--description--font-family: var(--global--font-secondary);
-	--branding--logo--max-width: 300px;
-	--branding--logo--max-height: 100px;
-	--branding--logo--max-width-mobile: 96px;
-	--branding--logo--max-height-mobile: 96px;
+	--branding--logo--max-width: 302px;
+	--branding--logo--max-height: 30px;
+	--branding--logo--max-width-mobile: 154px;
+	--branding--logo--max-height-mobile: 16px;
 
 	/* Main navigation */
 	--primary-nav--font-family: var(--global--font-secondary);
@@ -260,7 +298,7 @@
 	--responsive--alignleft-margin: var(--global--spacing-horizontal);
 }
 
-@media only screen and (min-width: 482px) {
+@media only screen and (min-width: 767px) {
 
 	:root {
 		--responsive--aligndefault-width: min(calc(100vw - 4 * var(--global--spacing-horizontal)), 610px);
@@ -273,7 +311,7 @@
 
 	:root {
 		--responsive--aligndefault-width: min(calc(100vw - 8 * var(--global--spacing-horizontal)), 610px);
-		--responsive--alignwide-width: min(calc(100vw - 8 * var(--global--spacing-horizontal)), 1240px);
+		--responsive--alignwide-width: min(calc(100vw - 8 * var(--global--spacing-horizontal)), 1168px);
 	}
 }
 
@@ -292,7 +330,7 @@
 	margin-right: auto;
 }
 
-@media only screen and (min-width: 482px) {
+@media only screen and (min-width: 767px) {
 
 	.full-max-width {
 		max-width: var(--responsive--alignfull-width);
@@ -382,7 +420,7 @@ blockquote footer {
 	font-size: var(--global--font-size-xs);
 	font-style: var(--quote--font-style-cite);
 }
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 766px) {
 
 	blockquote {
 		padding-left: calc(0.5 * var(--global--spacing-horizontal));
@@ -531,7 +569,10 @@ a:hover {
 }
 
 .wp-block-button__link {
-	border: var(--button--border-width) solid transparent;
+	-webkit-box-shadow: 0 18px 26px -17px rgb(207, 173, 172);
+	-moz-box-shadow: 0 18px 26px -17px rgb(207, 173, 172);
+	box-shadow: 0 18px 26px -17px rgb(207, 173, 172);
+	border: var(--button--border-width) solid var(--global--color-dark-creme);
 	border-radius: var(--button--border-radius);
 	cursor: pointer;
 	font-weight: var(--button--font-weight);
@@ -540,10 +581,6 @@ a:hover {
 	line-height: var(--button--line-height);
 	padding: var(--button--padding-vertical) var(--button--padding-horizontal);
 	text-decoration: none;
-}
-
-.wp-block-button__link:not(:hover):not(:active):not(.has-text-color) {
-	color: var(--global--color-background);
 }
 
 .has-background .wp-block-button__link:not(:hover):not(:active):not(.has-text-color) {
@@ -555,7 +592,7 @@ a:hover {
 }
 
 .wp-block-button__link:not(:hover):not(:active):not(.has-background) {
-	background-color: var(--global--color-primary);
+	background-color: var(--global--color-white);
 }
 
 .has-background .wp-block-button__link:not(:hover):not(:active):not(.has-background) {
@@ -570,8 +607,7 @@ a:hover {
 }
 
 .wp-block-button__link:focus {
-	outline-offset: -6px;
-	outline: 2px dotted currentColor;
+	outline: 0;
 }
 
 .wp-block-button__link:disabled {
@@ -818,37 +854,6 @@ a:hover {
 .wp-block-columns.is-selected > .wp-block-column > *:nth-last-child(2) {
 	margin-bottom: 0;
 }
-@media only screen and (min-width: 652px) {
-
-	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) {
-		margin-left: calc(-2 * var(--global--spacing-horizontal));
-		margin-top: calc(2.5 * var(--global--spacing-horizontal));
-		z-index: 2;
-	}
-
-	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > p:not(.has-background),
-	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h1:not(.has-background),
-	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h2:not(.has-background),
-	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h3:not(.has-background),
-	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h4:not(.has-background),
-	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h5:not(.has-background),
-	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > h6:not(.has-background),
-	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul:not(.has-background),
-	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ol:not(.has-background),
-	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > pre:not(.has-background) {
-		background-color: var(--global--color-background);
-		padding: var(--global--spacing-unit);
-	}
-
-	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ul:not(.has-background),
-	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n) > ol:not(.has-background) {
-		padding-left: calc(2 * var(--global--spacing-horizontal));
-	}
-
-	.wp-block-columns.is-style-twentytwentyone-columns-overlap .wp-block-column:nth-child(2n).is-vertically-aligned-center {
-		margin-top: 0;
-	}
-}
 
 .wp-block[data-align=full] > .wp-block-columns p:not(.has-background),
 .wp-block[data-align=full] > .wp-block-columns h1:not(.has-background),
@@ -873,7 +878,10 @@ a:hover {
 }
 
 .wp-block-file .wp-block-file__button {
-	border: var(--button--border-width) solid transparent;
+	-webkit-box-shadow: 0 18px 26px -17px rgb(207, 173, 172);
+	-moz-box-shadow: 0 18px 26px -17px rgb(207, 173, 172);
+	box-shadow: 0 18px 26px -17px rgb(207, 173, 172);
+	border: var(--button--border-width) solid var(--global--color-dark-creme);
 	border-radius: var(--button--border-radius);
 	cursor: pointer;
 	font-weight: var(--button--font-weight);
@@ -885,10 +893,6 @@ a:hover {
 	display: inline-block;
 }
 
-.wp-block-file .wp-block-file__button:not(:hover):not(:active):not(.has-text-color) {
-	color: var(--global--color-background);
-}
-
 .has-background .wp-block-file .wp-block-file__button:not(:hover):not(:active):not(.has-text-color) {
 	color: var(--local--color-background, var(--global--color-primary));
 }
@@ -898,7 +902,7 @@ a:hover {
 }
 
 .wp-block-file .wp-block-file__button:not(:hover):not(:active):not(.has-background) {
-	background-color: var(--global--color-primary);
+	background-color: var(--global--color-white);
 }
 
 .has-background .wp-block-file .wp-block-file__button:not(:hover):not(:active):not(.has-background) {
@@ -913,8 +917,7 @@ a:hover {
 }
 
 .wp-block-file .wp-block-file__button:focus {
-	outline-offset: -6px;
-	outline: 2px dotted currentColor;
+	outline: 0;
 }
 
 .wp-block-file .wp-block-file__button:disabled {
@@ -1511,7 +1514,7 @@ pre.wp-block-preformatted {
 .wp-block-query.has-background {
 	padding: calc(0.666 * var(--global--spacing-vertical));
 }
-@media only screen and (min-width: 482px) {
+@media only screen and (min-width: 767px) {
 
 	.wp-block-query.has-background {
 		padding: var(--global--spacing-vertical);
@@ -1618,7 +1621,7 @@ pre.wp-block-preformatted {
 	line-height: var(--quote--line-height-large);
 	margin-right: 10px;
 }
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 766px) {
 
 	.wp-block-quote.is-large,
 	.wp-block-quote.is-style-large {
@@ -1641,7 +1644,7 @@ pre.wp-block-preformatted {
 		right: 0;
 	}
 }
-@media only screen and (max-width: 481px) {
+@media only screen and (max-width: 766px) {
 
 	.wp-block-quote {
 		padding-left: calc(0.5 * var(--global--spacing-horizontal));
@@ -1665,7 +1668,7 @@ pre.wp-block-preformatted {
 		padding-right: 0;
 	}
 }
-@media only screen and (min-width: 482px) {
+@media only screen and (min-width: 767px) {
 
 	.wp-block-quote {
 		margin-left: auto;
@@ -1809,7 +1812,10 @@ pre.wp-block-preformatted {
 }
 
 .wp-block-search .wp-block-search__button.wp-block-search__button {
-	border: var(--button--border-width) solid transparent;
+	-webkit-box-shadow: 0 18px 26px -17px rgb(207, 173, 172);
+	-moz-box-shadow: 0 18px 26px -17px rgb(207, 173, 172);
+	box-shadow: 0 18px 26px -17px rgb(207, 173, 172);
+	border: var(--button--border-width) solid var(--global--color-dark-creme);
 	border-radius: var(--button--border-radius);
 	cursor: pointer;
 	font-weight: var(--button--font-weight);
@@ -1822,10 +1828,6 @@ pre.wp-block-preformatted {
 	margin-left: 0;
 }
 
-.wp-block-search .wp-block-search__button.wp-block-search__button:not(:hover):not(:active):not(.has-text-color) {
-	color: var(--global--color-background);
-}
-
 .has-background .wp-block-search .wp-block-search__button.wp-block-search__button:not(:hover):not(:active):not(.has-text-color) {
 	color: var(--local--color-background, var(--global--color-primary));
 }
@@ -1835,7 +1837,7 @@ pre.wp-block-preformatted {
 }
 
 .wp-block-search .wp-block-search__button.wp-block-search__button:not(:hover):not(:active):not(.has-background) {
-	background-color: var(--global--color-primary);
+	background-color: var(--global--color-white);
 }
 
 .has-background .wp-block-search .wp-block-search__button.wp-block-search__button:not(:hover):not(:active):not(.has-background) {
@@ -1850,8 +1852,7 @@ pre.wp-block-preformatted {
 }
 
 .wp-block-search .wp-block-search__button.wp-block-search__button:focus {
-	outline-offset: -6px;
-	outline: 2px dotted currentColor;
+	outline: 0;
 }
 
 .wp-block-search .wp-block-search__button.wp-block-search__button:disabled {
@@ -2344,60 +2345,6 @@ a {
 	color: var(--local--color-primary);
 }
 
-.has-green-color[class] {
-	color: var(--global--color-green);
-}
-
-.has-green-color[class] > [class*=__inner-container] {
-	--local--color-primary: var(--global--color-green, #fff);
-	color: var(--local--color-primary);
-}
-
-.has-blue-color[class] {
-	color: var(--global--color-blue);
-}
-
-.has-blue-color[class] > [class*=__inner-container] {
-	--local--color-primary: var(--global--color-blue, #fff);
-	color: var(--local--color-primary);
-}
-
-.has-purple-color[class] {
-	color: var(--global--color-purple);
-}
-
-.has-purple-color[class] > [class*=__inner-container] {
-	--local--color-primary: var(--global--color-purple, #fff);
-	color: var(--local--color-primary);
-}
-
-.has-red-color[class] {
-	color: var(--global--color-red);
-}
-
-.has-red-color[class] > [class*=__inner-container] {
-	--local--color-primary: var(--global--color-red, #fff);
-	color: var(--local--color-primary);
-}
-
-.has-orange-color[class] {
-	color: var(--global--color-orange);
-}
-
-.has-orange-color[class] > [class*=__inner-container] {
-	--local--color-primary: var(--global--color-orange, #fff);
-	color: var(--local--color-primary);
-}
-
-.has-yellow-color[class] {
-	color: var(--global--color-yellow);
-}
-
-.has-yellow-color[class] > [class*=__inner-container] {
-	--local--color-primary: var(--global--color-yellow, #fff);
-	color: var(--local--color-primary);
-}
-
 .has-white-color[class] {
 	color: var(--global--color-white);
 }
@@ -2454,60 +2401,6 @@ a {
 	background-color: var(--local--color-background);
 }
 
-.has-green-background-color[class] {
-	background-color: var(--global--color-green);
-}
-
-.has-green-background-color[class] > [class*=__inner-container] {
-	--local--color-background: var(--global--color-green, #fff);
-	background-color: var(--local--color-background);
-}
-
-.has-blue-background-color[class] {
-	background-color: var(--global--color-blue);
-}
-
-.has-blue-background-color[class] > [class*=__inner-container] {
-	--local--color-background: var(--global--color-blue, #fff);
-	background-color: var(--local--color-background);
-}
-
-.has-purple-background-color[class] {
-	background-color: var(--global--color-purple);
-}
-
-.has-purple-background-color[class] > [class*=__inner-container] {
-	--local--color-background: var(--global--color-purple, #fff);
-	background-color: var(--local--color-background);
-}
-
-.has-red-background-color[class] {
-	background-color: var(--global--color-red);
-}
-
-.has-red-background-color[class] > [class*=__inner-container] {
-	--local--color-background: var(--global--color-red, #fff);
-	background-color: var(--local--color-background);
-}
-
-.has-orange-background-color[class] {
-	background-color: var(--global--color-orange);
-}
-
-.has-orange-background-color[class] > [class*=__inner-container] {
-	--local--color-background: var(--global--color-orange, #fff);
-	background-color: var(--local--color-background);
-}
-
-.has-yellow-background-color[class] {
-	background-color: var(--global--color-yellow);
-}
-
-.has-yellow-background-color[class] > [class*=__inner-container] {
-	--local--color-background: var(--global--color-yellow, #fff);
-	background-color: var(--local--color-background);
-}
-
 .has-white-background-color[class] {
 	background-color: var(--global--color-white);
 }
@@ -2536,65 +2429,15 @@ a {
 	--local--color-primary: var(--global--color-primary, #000);
 }
 
-.has-background:not(.has-text-color).has-green-background-color[class],
-.has-background:not(.has-text-color).has-blue-background-color[class],
-.has-background:not(.has-text-color).has-purple-background-color[class],
-.has-background:not(.has-text-color).has-red-background-color[class],
-.has-background:not(.has-text-color).has-orange-background-color[class],
-.has-background:not(.has-text-color).has-yellow-background-color[class],
 .has-background:not(.has-text-color).has-white-background-color[class] {
 	color: var(--global--color-dark-gray);
 }
 
-.has-background:not(.has-text-color).has-green-background-color[class] > [class*=__inner-container],
-.has-background:not(.has-text-color).has-blue-background-color[class] > [class*=__inner-container],
-.has-background:not(.has-text-color).has-purple-background-color[class] > [class*=__inner-container],
-.has-background:not(.has-text-color).has-red-background-color[class] > [class*=__inner-container],
-.has-background:not(.has-text-color).has-orange-background-color[class] > [class*=__inner-container],
-.has-background:not(.has-text-color).has-yellow-background-color[class] > [class*=__inner-container],
 .has-background:not(.has-text-color).has-white-background-color[class] > [class*=__inner-container] {
 	--local--color-primary: var(--global--color-primary, #000);
 	color: var(--local--color-primary, var(--global--color-primary));
 }
 
-.is-dark-theme .has-background:not(.has-text-color).has-green-background-color[class] > [class*=__inner-container],
-.is-dark-theme .has-background:not(.has-text-color).has-blue-background-color[class] > [class*=__inner-container],
-.is-dark-theme .has-background:not(.has-text-color).has-purple-background-color[class] > [class*=__inner-container],
-.is-dark-theme .has-background:not(.has-text-color).has-red-background-color[class] > [class*=__inner-container],
-.is-dark-theme .has-background:not(.has-text-color).has-orange-background-color[class] > [class*=__inner-container],
-.is-dark-theme .has-background:not(.has-text-color).has-yellow-background-color[class] > [class*=__inner-container],
 .is-dark-theme .has-background:not(.has-text-color).has-white-background-color[class] > [class*=__inner-container] {
 	--local--color-primary: var(--global--color-background, #fff);
-}
-
-.has-purple-to-yellow-gradient-background {
-	background: linear-gradient(160deg, var(--global--color-purple), var(--global--color-yellow));
-}
-
-.has-yellow-to-purple-gradient-background {
-	background: linear-gradient(160deg, var(--global--color-yellow), var(--global--color-purple));
-}
-
-.has-green-to-yellow-gradient-background {
-	background: linear-gradient(160deg, var(--global--color-green), var(--global--color-yellow));
-}
-
-.has-yellow-to-green-gradient-background {
-	background: linear-gradient(160deg, var(--global--color-yellow), var(--global--color-green));
-}
-
-.has-red-to-yellow-gradient-background {
-	background: linear-gradient(160deg, var(--global--color-red), var(--global--color-yellow));
-}
-
-.has-yellow-to-red-gradient-background {
-	background: linear-gradient(160deg, var(--global--color-yellow), var(--global--color-red));
-}
-
-.has-purple-to-red-gradient-background {
-	background: linear-gradient(160deg, var(--global--color-purple), var(--global--color-red));
-}
-
-.has-red-to-purple-gradient-background {
-	background: linear-gradient(160deg, var(--global--color-red), var(--global--color-purple));
 }
