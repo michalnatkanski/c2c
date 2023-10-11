@@ -1,0 +1,35 @@
+@import '../01-settings/typography.scss';
+@import '../01-settings/global-classes.scss';
+
+.info-boxes {
+    padding: 50px 0;
+
+    .wp-block-columns {
+        flex-wrap: wrap !important;
+        justify-content: space-between;
+
+        @include media(mobile-only) {
+            justify-content: center;
+        }
+
+        .wp-block-column {
+            min-width: 233px;
+            max-width: 294px;
+        }
+    }
+
+    .wp-block-heading {
+        position: relative;
+        color: var(--global--color-very-dark-gray);
+        padding-bottom: 29px;
+        margin-left: 22px;
+        @extend .font-variation-v7;
+        @extend .info-boxes-decoration;
+    }
+
+    p {
+        margin-left: 61px;
+        max-width: 233px;
+        @extend .font-variation-v8;
+    }
+}
